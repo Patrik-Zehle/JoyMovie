@@ -1,0 +1,224 @@
+*{
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+    list-style: none;
+    text-decoration: none;
+    box-sizing: border-box;
+    scroll-padding-top: 2rem;
+
+}
+
+@font-face{
+    src: url(fonts/Roboto-Regular.ttf);
+    font-family: RobotoM;
+}
+
+:root{
+    --primary-color: #0f0e0e;
+    --text-color: #00A9F2;
+    --red-color:#aa1100;
+    --white-color: white;
+}
+
+.light-theme{
+    --primary-color: #f8f8ff;
+    --text-color: #aa1100;
+    --box-color:rgb(0, 0, 0);
+}
+
+body{
+    background-color: var(--primary-color);
+}
+
+html::-webkit-scrollbar{
+    width: .7rem;
+    background: var(--red-color);
+}
+
+html::-webkit-scrollbar-thumb{
+    background: var(--text-color);
+    border-radius: 6rem;
+}
+
+/*********MENU*********/
+
+header{
+    position: fixed;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    z-index: 100;
+    top: 3%;
+    left: 2%;
+}
+
+
+.logo{
+    width: 8%;
+    padding-top: .5%;
+    padding-left: 5%;
+    cursor: pointer;
+
+}
+
+header h1{
+    font-size: 1.5rem;
+    font-family: RobotoM;
+    padding-left: 1%;
+    color: var(--text-color);
+}
+
+.menu{
+    display: flex;
+    padding-left: 20%;
+    column-gap: 7.5rem;
+    font-family: RobotoM;
+    z-index: 100;
+}
+
+.menu li{
+    position: relative;
+}
+
+.menu a{
+    font-size: 1rem;
+    color: var(--text-color);
+}
+
+.menu a::after{
+    content: "";
+    width: 0;
+    height: 2px;
+    background-color:#aa1100;
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    transition: 0.4s all linear;
+}
+
+.menu a:hover::after, .menu .home-active::after{
+    width: 100%;
+}
+
+section{
+    padding: 4.5rem 0 1.5rem;
+}
+
+/*********HOME*********/
+.container{
+    width: 100%;
+    min-height: 80vh;
+    position: relative;
+    display: flex;
+    align-items: center;
+    margin-top: 5%;
+    animation: anim 2s 1;
+    overflow: hidden;
+}
+
+.container img{
+    position: absolute;
+    width: 95%;
+    height: 95%;
+    margin-left: 2.4%;
+    margin-top: 2%;
+    object-position: center;
+    z-index: -1;
+    border-radius: 2rem;
+    opacity: .7;
+    /*box-shadow: 0px 0px 15px 2px var(--text-color);*/
+}
+
+
+@keyframes anim {
+    0%{
+        opacity: 0;
+    }
+
+    10%{
+        opacity: .1;
+    }
+
+    20%{
+        opacity: .2;
+    }
+
+    30%{
+        opacity: .3;
+    }
+    40%{
+        opacity: .4;
+    }
+    50%{
+        opacity: .5;
+    }
+    60%{
+        opacity: .6;
+    }
+    70%{
+        opacity: .7;
+    }
+    80%{
+        opacity: .8;
+    }
+    90%{
+        opacity: .9;
+    }
+
+}
+
+.container span{
+    color:#de1600;
+}
+
+
+.textT{
+    color: white;
+    font-size: 4rem;
+    font-family: RobotoM;
+    z-index:10;
+    margin-left: 7rem;
+    margin-top: 14rem;
+}
+
+.container h2{
+    font-size: 1.5rem;
+    color: #de1600;
+}
+
+.swiper-pagination{
+    margin-bottom: 3%;
+}
+
+.swiper-pagination-bullet{
+    width: 2rem !important;
+    height: .5rem !important;
+    border-radius: 0.2rem !important;
+    background-color: var(--text-color) !important;
+    opacity: 1 !important;
+}
+
+.swiper-pagination-bullet-active{
+    width: 3.3rem !important;
+    background-color: var(--red-color) !important;
+}
+
+
+/*********MOVIES*********/
+.movies{
+    min-height: 100vh;
+    margin-top: 5rem;
+}
+
+.movies h1{
+    color: var(--text-color);
+    font-size: 4rem;
+    font-family: RobotoM;
+    padding-left: 5%;
+    padding-top: 5%;
+}
+
+.h1 span{
+    color: var(--red-color);
+}
